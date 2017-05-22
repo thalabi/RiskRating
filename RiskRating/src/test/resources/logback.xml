@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration packagingData="true" >
+
+	<property name="applicationPackage" value="com.riskRating" />
+	<property name="applicationPackage2" value="ca.cppib.irm" />
+
+		<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+			<encoder>
+<!-- 				<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36}.%method\(\) - %msg%n</pattern> -->
+<!-- 				<pattern>%d{HH:mm:ss.SSS} %-5level %logger{0}.%method\(\) - %msg%n</pattern> -->
+				<pattern>%d{HH:mm:ss.SSS} %-5level %logger.%method\(\) - %msg%n</pattern>
+<!-- 				<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{0}.%method\(\) - %msg%n</pattern> -->
+			</encoder>
+		</appender>
+
+
+	<logger name="${applicationPackage}" level="debug" />
+	<logger name="${applicationPackage2}" level="debug" />
+
+	<root level="error">
+		<appender-ref ref="STDOUT" />
+	</root>
+
+</configuration>
